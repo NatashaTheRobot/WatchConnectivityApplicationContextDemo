@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cBd-zo-S2n">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Select Food-->
+        <scene sceneID="bDF-fU-Gkt">
+            <objects>
+                <tableViewController id="FBJ-VS-44U" customClass="FoodSelectionViewController" customModule="WCApplicationContextDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" id="h4D-Fp-6rX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelTableViewCell" rowHeight="69" id="Obc-Qm-01D" customClass="LabelTableViewCell" customModule="WCApplicationContextDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="69"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Obc-Qm-01D" id="qc4-km-xPY">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="68.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkp-DE-NFJ">
+                                            <rect key="frame" x="281.5" y="12" width="37" height="44.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qkp-DE-NFJ" firstAttribute="centerY" secondItem="qc4-km-xPY" secondAttribute="centerY" id="Eql-wC-XJT"/>
+                                        <constraint firstItem="qkp-DE-NFJ" firstAttribute="centerX" secondItem="qc4-km-xPY" secondAttribute="centerX" id="Gc5-Ur-IUv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="qkp-DE-NFJ" id="F3D-Se-3zJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="FBJ-VS-44U" id="XbG-qA-DWv"/>
+                            <outlet property="delegate" destination="FBJ-VS-44U" id="3R4-aG-8Qt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select Food" id="Pgy-cs-srX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8a-sk-YfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="191"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5gz-1u-Ns1">
+            <objects>
+                <navigationController id="cBd-zo-S2n" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gDy-M4-PXm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FBJ-VS-44U" kind="relationship" relationship="rootViewController" id="JA4-im-BUC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xG-r5-fnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184" y="191"/>
+        </scene>
+    </scenes>
+</document>
