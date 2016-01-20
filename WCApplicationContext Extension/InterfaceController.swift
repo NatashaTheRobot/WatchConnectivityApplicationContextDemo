@@ -16,12 +16,12 @@ class InterfaceController: WKInterfaceController, DataSourceChangedDelegate {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        WatchSessionManager.sharedManager.addDataSourceChangedDelegate(self)
     }
 
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
+        
+        WatchSessionManager.sharedManager.addDataSourceChangedDelegate(self)
+        
         super.willActivate()
     }
 
