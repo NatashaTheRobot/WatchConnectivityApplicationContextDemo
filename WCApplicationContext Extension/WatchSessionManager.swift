@@ -9,34 +9,40 @@
 import WatchConnectivity
 
 protocol DataSourceChangedDelegate {
-    func dataSourceDidUpdate(dataSource: DataSource)
+    func dataSourceDidUpdate(_ dataSource: DataSource)
 }
 
 
 class WatchSessionManager: NSObject, WCSessionDelegate {
     
+    /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+    @available(watchOS 2.2, *)
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+
+    
     static let sharedManager = WatchSessionManager()
-    private override init() {
+    fileprivate override init() {
         super.init()
     }
 
-    private var dataSourceChangedDelegates = [DataSourceChangedDelegate]()
+    fileprivate var dataSourceChangedDelegates = [DataSourceChangedDelegate]()
     
-    private let session: WCSession = WCSession.defaultSession()
+    fileprivate let session: WCSession = WCSession.default()
     
     func startSession() {
         session.delegate = self
-        session.activateSession()
+        session.activate()
     }
     
-    func addDataSourceChangedDelegate<T where T: DataSourceChangedDelegate, T: Equatable>(delegate: T) {
+    func addDataSourceChangedDelegate<T>(_ delegate: T) where T: DataSourceChangedDelegate, T: Equatable {
         dataSourceChangedDelegates.append(delegate)
     }
     
-    func removeDataSourceChangedDelegate<T where T: DataSourceChangedDelegate, T: Equatable>(delegate: T) {
-        for (index, indexDelegate) in dataSourceChangedDelegates.enumerate() {
-            if let indexDelegate = indexDelegate as? T where indexDelegate == delegate {
-                dataSourceChangedDelegates.removeAtIndex(index)
+    func removeDataSourceChangedDelegate<T>(_ delegate: T) where T: DataSourceChangedDelegate, T: Equatable {
+        for (index, indexDelegate) in dataSourceChangedDelegates.enumerated() {
+            if let indexDelegate = indexDelegate as? T, indexDelegate == delegate {
+                dataSourceChangedDelegates.remove(at: index)
                 break
             }
         }
@@ -49,10 +55,10 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
 extension WatchSessionManager {
     
     // Receiver
-    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         
-        dispatch_async(dispatch_get_main_queue()) { [weak self] in
-            self?.dataSourceChangedDelegates.forEach { $0.dataSourceDidUpdate(DataSource(data: applicationContext))}
+        DispatchQueue.main.async { [weak self] in
+            self?.dataSourceChangedDelegates.forEach { $0.dataSourceDidUpdate(DataSource(data: applicationContext as [String : AnyObject]))}
         }
         
     }

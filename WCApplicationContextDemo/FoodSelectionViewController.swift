@@ -10,7 +10,7 @@ import UIKit
 
 class FoodSelectionViewController: UITableViewController {
 
-    private let food = ["🍦", "🍮", "🍤","🍉", "🍨", "🍏", "🍌", "🍰", "🍚", "🍓", "🍪", "🍕"]
+    fileprivate let food = ["🍦", "🍮", "🍤","🍉", "🍨", "🍏", "🍌", "🍰", "🍚", "🍓", "🍪", "🍕"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,16 +18,16 @@ class FoodSelectionViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return food.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("LabelTableViewCell", forIndexPath: indexPath) as! LabelTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelTableViewCell", for: indexPath) as! LabelTableViewCell
 
         cell.configure(withText: food[indexPath.row])
 
@@ -36,13 +36,13 @@ class FoodSelectionViewController: UITableViewController {
     
     // MARK: Table view delegate
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let foodItem = food[indexPath.row]
         do {
-            try WatchSessionManager.sharedManager.updateApplicationContext(["food" : foodItem])
+            try WatchSessionManager.sharedManager.updateApplicationContext(["food" : foodItem as AnyObject])
         } catch {
-            let alertController = UIAlertController(title: "Oops!", message: "Looks like your \(foodItem) got stuck on the way! Please send again!", preferredStyle: .Alert)
-            presentViewController(alertController, animated: true, completion: nil)
+            let alertController = UIAlertController(title: "Oops!", message: "Looks like your \(foodItem) got stuck on the way! Please send again!", preferredStyle: .alert)
+            present(alertController, animated: true, completion: nil)
         }
     }
 
