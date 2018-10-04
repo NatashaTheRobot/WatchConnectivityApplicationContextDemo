@@ -31,7 +31,7 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
         super.init()
     }
     
-    fileprivate let session: WCSession? = WCSession.isSupported() ? WCSession.default() : nil
+    fileprivate let session: WCSession? = WCSession.isSupported() ? WCSession.default : nil
     
     fileprivate var validSession: WCSession? {
         

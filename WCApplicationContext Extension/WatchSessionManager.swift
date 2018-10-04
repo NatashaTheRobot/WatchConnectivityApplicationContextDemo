@@ -28,7 +28,7 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
 
     fileprivate var dataSourceChangedDelegates = [DataSourceChangedDelegate]()
     
-    fileprivate let session: WCSession = WCSession.default()
+    fileprivate let session: WCSession = WCSession.default
     
     func startSession() {
         session.delegate = self
