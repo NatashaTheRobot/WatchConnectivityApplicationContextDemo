@@ -14,8 +14,8 @@ class InterfaceController: WKInterfaceController, DataSourceChangedDelegate {
 
     @IBOutlet var foodLabel: WKInterfaceLabel!
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
     }
 
     override func willActivate() {
@@ -33,11 +33,11 @@ class InterfaceController: WKInterfaceController, DataSourceChangedDelegate {
     }
     
     // MARK: DataSourceUpdatedDelegate
-    func dataSourceDidUpdate(dataSource: DataSource) {
+    func dataSourceDidUpdate(_ dataSource: DataSource) {
         switch dataSource.item {
-        case .Food(let foodItem):
+        case .food(let foodItem):
             foodLabel.setText(foodItem)
-        case .Unknown:
+        case .unknown:
             foodLabel.setText("¯\\_(ツ)_/¯")
         }
     }

@@ -11,15 +11,15 @@ struct DataSource {
     let item: Item
     
     enum Item {
-        case Food(String)
-        case Unknown
+        case food(String)
+        case unknown
     }
     
     init(data: [String : AnyObject]) {
         if let foodItem = data["food"] as? String {
-            item = Item.Food(foodItem)
+            item = Item.food(foodItem)
         } else {
-            item = Item.Unknown
+            item = Item.unknown
         }
     }
 }

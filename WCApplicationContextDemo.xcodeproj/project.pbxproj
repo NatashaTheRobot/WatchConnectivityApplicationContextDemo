@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA0E7C191BB43BD80068F06D /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E7C181BB43BD80068F06D /* DataSource.swift */; settings = {ASSET_TAGS = (); }; };
-		FA2524D01BB16F14005EE61E /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2524CF1BB16F14005EE61E /* WatchSessionManager.swift */; settings = {ASSET_TAGS = (); }; };
-		FA2524D21BB17174005EE61E /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2524D11BB17174005EE61E /* WatchSessionManager.swift */; settings = {ASSET_TAGS = (); }; };
+		FA0E7C191BB43BD80068F06D /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E7C181BB43BD80068F06D /* DataSource.swift */; };
+		FA2524D01BB16F14005EE61E /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2524CF1BB16F14005EE61E /* WatchSessionManager.swift */; };
+		FA2524D21BB17174005EE61E /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2524D11BB17174005EE61E /* WatchSessionManager.swift */; };
 		FA9BE2301BAF24690016A7F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BE22F1BAF24690016A7F7 /* AppDelegate.swift */; };
 		FA9BE2351BAF24690016A7F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9BE2331BAF24690016A7F7 /* Main.storyboard */; };
 		FA9BE2371BAF24690016A7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9BE2361BAF24690016A7F7 /* Assets.xcassets */; };
@@ -23,8 +23,8 @@
 		FA9BE2731BAF285A0016A7F7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BE2721BAF285A0016A7F7 /* ExtensionDelegate.swift */; };
 		FA9BE2751BAF285A0016A7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9BE2741BAF285A0016A7F7 /* Assets.xcassets */; };
 		FA9BE2791BAF285A0016A7F7 /* WCApplicationContext.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA9BE25F1BAF285A0016A7F7 /* WCApplicationContext.app */; };
-		FA9BE2831BAF2E700016A7F7 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BE2821BAF2E700016A7F7 /* LabelTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		FA9BE2851BAF2F130016A7F7 /* FoodSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BE2841BAF2F130016A7F7 /* FoodSelectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FA9BE2831BAF2E700016A7F7 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BE2821BAF2E700016A7F7 /* LabelTableViewCell.swift */; };
+		FA9BE2851BAF2F130016A7F7 /* FoodSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BE2841BAF2F130016A7F7 /* FoodSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,25 +322,30 @@
 		FA9BE2241BAF24690016A7F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = NatashaTheRobot;
 				TargetAttributes = {
 					FA9BE22B1BAF24690016A7F7 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0940;
 					};
 					FA9BE23F1BAF24690016A7F7 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0940;
 						TestTargetID = FA9BE22B1BAF24690016A7F7;
 					};
 					FA9BE24A1BAF24690016A7F7 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0940;
 						TestTargetID = FA9BE22B1BAF24690016A7F7;
 					};
 					FA9BE25E1BAF285A0016A7F7 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0940;
 					};
 					FA9BE26A1BAF285A0016A7F7 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -515,8 +520,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -559,8 +566,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -579,6 +588,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -591,6 +601,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.WCApplicationContextDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -602,6 +614,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.WCApplicationContextDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -613,6 +627,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.WCApplicationContextDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WCApplicationContextDemo.app/WCApplicationContextDemo";
 			};
 			name = Debug;
@@ -625,6 +641,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.WCApplicationContextDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WCApplicationContextDemo.app/WCApplicationContextDemo";
 			};
 			name = Release;
@@ -636,6 +654,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.WCApplicationContextDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = WCApplicationContextDemo;
 				USES_XCTRUNNER = YES;
 			};
@@ -648,6 +668,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.WCApplicationContextDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = WCApplicationContextDemo;
 				USES_XCTRUNNER = YES;
 			};
@@ -662,6 +684,8 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -676,6 +700,8 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -684,14 +710,16 @@
 		FA9BE27F1BAF285A0016A7F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = WCApplicationContext_Extension;
 				INFOPLIST_FILE = WCApplicationContext/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.WCApplicationContextDemo.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -700,14 +728,16 @@
 		FA9BE2801BAF285A0016A7F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = WCApplicationContext_Extension;
 				INFOPLIST_FILE = WCApplicationContext/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.WCApplicationContextDemo.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
